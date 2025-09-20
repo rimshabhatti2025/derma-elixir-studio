@@ -1,0 +1,49 @@
+/* Skin Specialist Dashboard Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem;
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between heading and nav */
+    align-items: center; /* Vertically center items */
+    line-height: 30px;
+  }
+  
+  header h1 {
+    margin: 0;
+    margin-left: 30px;
+  }
+  
+  nav {
+    display: flex;
+    gap: 1rem; /* Space between nav links */
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem; /* Add padding for better clickability */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s ease; /* Smooth hover effect */
+  }
+  
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.1); /* Light background on hover */
+  }
+  .logout {
+    background-color: rgba(255, 0, 0, 0.762);
+    margin-right: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .logout:hover {
+    background-color: rgba(255, 0, 0, 0.544);
+  }

@@ -1,0 +1,215 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  color: #333;
+  line-height: 1.6;
+  height: 100vh; /* Ensure body takes the full height of the viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.auth-header {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: linear-gradient(135deg, #2a3a57 0%, #8e6c88 100%);
+  color: #fff;
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo:hover {
+  transform: scale(1.03);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+}
+
+/* Login Form Section */
+
+.auth-section {
+  max-width: 400px;
+  margin: auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 5%;
+}
+
+.auth-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.btn {
+  background: linear-gradient(135deg, #2a3a57 0%, #8e6c88 100%);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #2a3a57 0%, #8e6c88 100%);
+  transform: translateY(-2px); /* Slight upward lift */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.btn:active {
+  background: linear-gradient(135deg, #2a3a57 0%, #8e6c88 100%);
+  transform: translateY(0); /* Reset lift effect */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Flatten shadow when pressed */
+}
+.auth-section p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-section a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.auth-section a:hover {
+  text-decoration: underline;
+}
+/* Footer Styles */
+.footer {
+  background: #2a3a57;
+  color: #fff;
+  padding: 40px 0 20px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  animation: fadeInFooter 1s ease-in;
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8e6c88, #ff9a9e);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer:hover::before {
+  opacity: 1;
+}
+
+.footer p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+/* Form Slide-Fade Animation */
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to form container */
+.auth-section {
+  animation: slideFadeIn 1s ease-in-out;
+}

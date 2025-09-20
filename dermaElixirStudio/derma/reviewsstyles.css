@@ -1,0 +1,230 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #2a3a57 0%, #8e6c88 100%);
+  color: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo:hover {
+  transform: scale(1.03);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* Reviews Section */
+/* Reviews Section */
+.reviews-section {
+  background: #ffffff;
+  padding: 3rem 0;
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in-out; /* Add animation here */
+}
+
+.reviews-section h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-in-out; /* Apply animation */
+}
+
+.reviews-section p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease-in-out; /* Apply animation */
+}
+
+.reviews-section .review {
+  background: #f1f1f1;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in-out; /* Apply animation */
+}
+
+.reviews-section .review h3 {
+  font-size: 1.5rem;
+  color: #3498db;
+  margin-bottom: 0.5rem;
+  animation: fadeInUp 1s ease-in-out; /* Apply animation */
+}
+
+.reviews-section .rating {
+  color: #f39c12;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-in-out; /* Apply animation */
+}
+
+.reviews-section .submit-review {
+  background: #ecf0f1;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  animation: fadeInUp 1s ease-in-out; /* Apply animation */
+}
+
+.reviews-section .submit-review h3 {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-in-out; /* Apply animation */
+}
+
+.reviews-section .submit-review label {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+/* Footer Styles */
+.footer {
+  background: #2a3a57;
+  color: #fff;
+  padding: 40px 0 20px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  animation: fadeInFooter 1s ease-in;
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8e6c88, #ff9a9e);
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer:hover::before {
+  opacity: 1;
+}
+
+.footer p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
